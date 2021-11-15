@@ -1,0 +1,20 @@
+# frozen_string_literal: true
+
+Sidekiq.configure_server do |config|
+  config.redis = { url: ENV.fetch('REDIS_URL_SIDEKIQ', 'redis://localhost:6379/1') }
+
+  # sidekiq-status
+  # accepts :expiration (optional)
+  Sidekiq::Status.configure_server_middleware config, expiration: 30.minutes
+
+  # accepts :expiration (optional)
+  Sidekiq::Status.configure_client_middleware config, expiration: 30.minutes
+end
+
+Sidekiq.configure_client do |config|
+  config.redis = { url: ENV.fetch('REDIS_URL_SIDEKIQ', 'redis://localhost:6379/1') }
+
+  # sidekiq-status
+  # accepts :expiration (optional)
+  Sidekiq::Status.configure_client_middleware config, expiration: 30.minutes
+end

@@ -1,0 +1,14 @@
+ <h1>htmx Progress Bar Worker Test</h1>
+
+ <p>In this example, clicking the <strong>Start Job</strong> button will launch a worker and begin the load polling. 
+
+ The worker loops for 10 iterations. Each time, it increases the worker progress by 10% then sleeps for one second. 
+
+ Second, it starts the load polling cycle. After displaying the progress bar, the partial 
+
+ <div hx-target="this" hx-swap="outerHTML">
+  <h3>Start Worker</h3>
+  <button type="button" class="btn btn-primary" hx-post="/progress_bar_worker/start">
+            Start Job
+  </button>
+</div>
