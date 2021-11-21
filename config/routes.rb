@@ -3,12 +3,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   mount Sidekiq::Web => '/sidekiq'
 
-  resources :progress_bar, only: [:index] do
-  end
-
+  # htmx Progress Bar
+  get '/progress_bar', to: 'progress_bar#index'
   post '/progress_bar/start', to: 'progress_bar#start'
   get '/progress_bar/job', to: 'progress_bar#job'
 
