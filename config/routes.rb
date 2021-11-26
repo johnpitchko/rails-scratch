@@ -3,6 +3,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  # Admin page for Sidekiq
   mount Sidekiq::Web => '/sidekiq'
 
   # htmx Progress Bar
@@ -14,4 +15,9 @@ Rails.application.routes.draw do
   get '/progress_bar_worker', to: 'progress_bar_worker#index'
   post '/progress_bar_worker/start', to: 'progress_bar_worker#start'
   get '/progress_bar_worker/job', to: 'progress_bar_worker#job'
+
+  # Spinner Worker
+  get '/spinner_worker', to: 'spinner_worker#index'
+  post '/spinner_worker/start', to: 'spinner_worker#start'
+  get '/spinner_worker/run', to: 'spinner_worker#run'
 end

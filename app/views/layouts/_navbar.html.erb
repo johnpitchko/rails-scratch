@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Rails Scratch</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="htmxDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            htmx
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="htmx-dropdown">
+            <li><%= link_to 'Progress bar', progress_bar_path, class: 'dropdown-item' %></li>
+            <li><%= link_to 'Progress bar worker', progress_bar_worker_path, class: 'dropdown-item' %></li>
+            <li><%= link_to 'Spinner worker', spinner_worker_path, class: 'dropdown-item' %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

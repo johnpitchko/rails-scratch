@@ -27,6 +27,9 @@ gem 'sidekiq-status', '~> 2.1'
 # Foreman
 gem 'foreman', '~> 0.87.2'
 
+# High Voltage for static pages
+gem 'high_voltage', '~> 3.1'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
