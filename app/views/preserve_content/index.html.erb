@@ -1,0 +1,12 @@
+<h1>Preserving Content</h1>
+
+<p>The <code>hx-preserve</code> attribute within htmx allows content in the DOM to be maintained through a <code>hx-swap</code> or other page render/refresh.</p>
+
+<p>In this example, clicking the <strong>Start</strong> button will start a client-side polling job that polls every 3 seconds via <code>hx-trigger</code>. The server updates the refresh counter and renders a partial that displays the current counter value and a Bootstrap spinner.</p> 
+
+<p>Note session cookies are used to store the counter, so this may not work if you have cookies disabled.</p>
+
+<div hx-post="/preserve_content/click">
+  <p>When the button is clicked below, this paragraph should disappear, but the Rick Roll lives on...</p>
+  <button class="btn btn-primary">Click me</button>
+</div>

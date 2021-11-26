@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   get '/spinner_worker', to: 'spinner_worker#index'
   post '/spinner_worker/start', to: 'spinner_worker#start'
   get '/spinner_worker/run', to: 'spinner_worker#run'
+
+  # Preserve content
+  get '/preserve_content', to: 'preserve_content#index'
+  post '/preserve_content/click', to: 'preserve_content#click'
 end
