@@ -1,0 +1,8 @@
+<p>Complete!</p>
+<p>Click the <strong>Restart Job</strong> button to start the job over again</p>
+
+<button type="button" class="btn btn-primary" hx-post="/spinner_worker/start">
+  Restart Job
+</button>
+
+<%= button_to "Back to Start", spinner_worker_path, method: :get, class: 'btn btn-secondary' %>

@@ -1,0 +1,10 @@
+<h1>htmx Spinner Worker</h1>
+
+ <div class="mt-5" hx-target="this">
+   <p>Click the <strong>Start Job</strong> button to start a Sidekiq worker. It will run for 10 seconds, then finish.</p>
+   <p>While the worker is running, a spinner will be displayed. A counter will also be displayed that is incremented by the controller each time the page is refreshed.</p>
+   <p>When the worker is finished, a completion message will be displayed.</p>
+  <button type="button" class="btn btn-primary" hx-post="/spinner_worker/start">
+    Start Job
+  </button>
+</div>
