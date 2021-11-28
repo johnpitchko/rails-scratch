@@ -1,14 +1,12 @@
- <h1>htmx Progress Bar Worker Test</h1>
+<h1>Progress Bar Worker</h1>
 
- <p>In this example, clicking the <strong>Start Job</strong> button will launch a worker and begin the load polling. 
+<p>In this example, clicking the <strong>Start Job</strong> button will launch a Sidekiq worker and begin polling the server every few seconds. </p>
 
- The worker loops for 10 iterations. Each time, it increases the worker progress by 10% then sleeps for one second. 
+<p>The worker loops for 10 iterations. Each time, it increases the worker progress by 10% then sleeps for one second.</p>
 
- Second, it starts the load polling cycle. After displaying the progress bar, the partial 
+<p>The progress bar updates itself every time the page polls the server.</p>
 
- <div hx-target="this" hx-swap="outerHTML">
+<div hx-target="this" hx-swap="outerHTML">
   <h3>Start Worker</h3>
-  <button type="button" class="btn btn-primary" hx-post="/progress_bar_worker/start">
-            Start Job
-  </button>
+   <button type="button" class="btn btn-primary" hx-post="/progress_bar_worker/start">Start Job</button>
 </div>
