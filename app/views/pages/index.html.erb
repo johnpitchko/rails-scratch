@@ -1,8 +1,12 @@
-<h1>Rails Scratch</h1>
-
-<p>Experiments, tech demos, proof of concepts and more!</p>
+<% content_for :hero do %>
+  <section class="py-5 container-fluid" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.525), rgba(0, 0, 0, 0.525)),
+url('https://live.staticflickr.com/65535/51006442041_82135964ee_6k.jpg'); background-position: center center; background-size: cover">
+    <div class="py-5 text-center">
+      <h1 class="text-white display-1">Rails Galaxy</h1>
+      <p class="h3 text-white-50 mt-5">Everything Rails (and some other cool tech too).<br> Experiments, tech demos, proof of concepts and more!</p>
+      <button class="btn btn-secondary btn-lg px-4"><i class="fab fa-github"></i> Browse on Github</button>
+    </div>
+  </section>
+<% end %>
 
 <p>Be aware that some of the content here is *experimental*. It might not work properly or is being fixed. Use at your own risk. If you do come across anything that does not work properly, please contact me.</p>
-
-<p>&copy; John Pitchko 2021<br />
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
