@@ -3,6 +3,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :scaffold_samples
   # Admin page for Sidekiq
   mount Sidekiq::Web => '/sidekiq'
 
