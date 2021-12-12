@@ -1,4 +1,4 @@
-<div hx-get="/spinner_worker/run?job_id=<%= @job_id %>" hx-trigger="every 3s">
+<div hx-get="/spinner_worker/run?job_id=<%= @job_id %>" hx-trigger="every 1s">
   <p>htmx is refreshing the page every 2 seconds. The spinner will continue to spin <em>smoothly</em> until the background job is complete, even through the refreshes.</p>
   <div class="spinner-border" role="status" id="spinner" hx-preserve="true">
     <span class="visually-hidden"></span>
